@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Personal CV</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link
       href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
       rel="stylesheet"
@@ -61,6 +60,9 @@
                   <a class="nav-link smooth-scroll" href="#skill">Skills</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link smooth-scroll" href="#ai-lab">AI Lab</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link smooth-scroll" href="#portfolio"
                     >Projects</a
                   >
@@ -92,15 +94,15 @@
                 data-parallax="true"
                 style="background-image: url('images/cc-bg-1.jpg')"
               ></div>
-              <div class="container">
+              <div class="container hero-container">
                 <div class="content-center">
                   <div class="cc-profile-image">
                     <a href="#"><img src="images/Image1.jpg" alt="Image" /></a>
                   </div>
+                  <p class="hero-kicker">Available for meaningful builds <span></span></p>
                   <div class="h2 title">Devansh Mittal</div>
-                  <p class="category text-white">
-                    Software Developer
-                  </p>
+                  <p class="category text-white" data-roles="Software Developer|Full-stack Builder|Problem Solver">Software Developer</p>
+                  <p class="hero-intro">I turn complex ideas into useful, fast, and human-centered digital experiences.</p>
                   <a
                     class="btn btn-primary smooth-scroll mr-2"
                     href="#contact"
@@ -109,12 +111,41 @@
                     >Hire Me</a
                   ><a
                     class="btn btn-primary"
-                    href="directory/My Resume.pdf"
-                    download="resume"
+                    href="directory/Devansh_Resume.pdf"
+                    download="Devansh_Resume.pdf"
                     data-aos="zoom-in"
                     data-aos-anchor="data-aos-anchor"
                     >Download CV</a
                   >
+                  <a class="hero-scroll smooth-scroll" href="#about" aria-label="Scroll to about section"><span>Scroll to explore</span><i class="fa fa-long-arrow-down"></i></a>
+                  <div class="hero-socials" aria-label="Social profiles">
+                    <a href="https://github.com/Devansh-Mittal2410" target="_blank" rel="noopener noreferrer" title="Open GitHub profile">
+                      <i class="fa fa-github" aria-hidden="true"></i><span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/devansh-mittal-3b4925305/" target="_blank" rel="noopener noreferrer" title="Open LinkedIn profile">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="hero-stage" aria-hidden="true">
+                  <div class="energy-field"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                  <div class="hero-code-card">
+                    <div class="hero-code-top"><span>developer.config</span><i class="fa fa-code"></i></div>
+                    <pre><code><b>const</b> developer = {
+  focus: [
+    <em>'full-stack systems'</em>,
+    <em>'automation &amp; AI'</em>,
+    <em>'human interfaces'</em>
+  ],
+  stack: [
+    <em>'React / Node.js'</em>,
+    <em>'Python / Java'</em>,
+    <em>'MongoDB / SQL'</em>
+  ],
+  principle: <em>'make it useful'</em>
+};</code></pre>
+                    <div class="hero-code-footer"><span>status: building</span><span>01 / 04</span></div>
+                  </div>
                 </div>
               </div>
               <div class="section">
@@ -335,6 +366,56 @@
             </div>
           </div>
         </div>
+        <div class="section ai-lab-section" id="ai-lab">
+          <div class="container">
+            <div class="ai-lab-heading">
+              <div>
+                <p class="eyebrow">Interactive build / 001</p>
+                <div class="h4 mb-2 title">AI Lab</div>
+                <h2>Ask the portfolio<br /><em>what it can do.</em></h2>
+              </div>
+              <p class="ai-lab-description">A small, local-first interface that turns natural language into structured product thinking. Try a prompt and inspect the response architecture.</p>
+            </div>
+            <div class="ai-lab-grid">
+              <div class="ai-console" data-aos="fade-up">
+                <div class="console-bar">
+                  <span class="console-lights"><i></i><i></i><i></i></span>
+                  <span class="console-title">devansh-ai / playground</span>
+                  <span class="console-status"><i></i> local demo</span>
+                </div>
+                <div class="prompt-chips" aria-label="Example prompts">
+                  <button type="button" class="prompt-chip" data-prompt="How do you approach a new product idea?">Product thinking</button>
+                  <button type="button" class="prompt-chip" data-prompt="What is your strongest technical skill?">Technical edge</button>
+                  <button type="button" class="prompt-chip" data-prompt="Give me a project architecture.">Architecture</button>
+                </div>
+                <form class="ai-prompt-form">
+                  <label for="ai-prompt" class="sr-only">Ask the AI portfolio a question</label>
+                  <textarea id="ai-prompt" rows="2" placeholder="Ask me about how I build..." required></textarea>
+                  <button class="run-prompt" type="submit"><span>Run prompt</span><i class="fa fa-arrow-up"></i></button>
+                </form>
+                <div class="ai-output" aria-live="polite">
+                  <div class="output-label"><span>response</span><span class="output-time">ready</span></div>
+                  <p class="output-text">I am ready to turn your question into a useful answer, a system sketch, or a sharper next step.</p>
+                </div>
+              </div>
+              <div class="telemetry-panel" data-aos="fade-left">
+                <div class="telemetry-header"><span>Runtime telemetry</span><span class="live-badge"><i></i> live</span></div>
+                <div class="signal-graph" aria-label="Animated system activity graph"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                <div class="telemetry-stats">
+                  <div><strong data-metric="latency">042</strong><small>ms latency</small></div>
+                  <div><strong data-metric="uptime">99.9</strong><small>% uptime</small></div>
+                  <div><strong data-metric="tokens">1.2k</strong><small>tokens ready</small></div>
+                </div>
+                <div class="stack-list">
+                  <div><span><i class="fa fa-circle"></i> Interface</span><b>online</b></div>
+                  <div><span><i class="fa fa-circle"></i> Reasoning layer</span><b>online</b></div>
+                  <div><span><i class="fa fa-circle"></i> Human review</span><b>always on</b></div>
+                </div>
+                <div class="telemetry-footer"><span>Built with HTML / CSS / JS</span><span>v1.0.4</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="section" id="portfolio">
           <div class="container">
             <div class="row">
@@ -342,69 +423,77 @@
                 <div class="h4 text-center mb-4 title">Projects</div>
               </div>
             </div>
+            <div class="project-filter" role="group" aria-label="Filter projects">
+              <button class="filter-button active" type="button" data-filter="all">All work</button>
+              <button class="filter-button" type="button" data-filter="web">Web apps</button>
+              <button class="filter-button" type="button" data-filter="data">Data &amp; ML</button>
+              <span class="project-count" aria-live="polite">04 projects</span>
+            </div>
             <div class="tab-content gallery mt-5">
               <div class="tab-pane active" id="web-development">
                 <div class="ml-auto mr-auto">
                   <div class="row">
                     <div class="col-md-6">
-                      <div
+                      <div data-project-category="web"
                         class="cc-porfolio-image img-raised"
                         data-aos="fade-up"
                         data-aos-anchor-placement="top-bottom">
-                        <a href="#">
+                        <a href="https://househunt-nova-1.onrender.com" target="_blank" rel="noopener noreferrer">
                           <figure class="cc-effect">
-                            <img src="images/project-1.jpg" alt="Image" >
+                            <img src="images/project-1.jpg" alt="House Hunt Nova preview" >
                             <figcaption>
-                              <div class="h4">Community Notice Board</div>
-                              <p>Web App (HTML, CSS, JS)</p>
+                              <div class="h4">House Hunt Nova</div>
+                              <p>Property Discovery Platform</p>
                             </figcaption>
                           </figure>
                         </a>
                       </div>
-                      <div
+                      <div data-project-category="data"
                         class="cc-porfolio-image img-raised"
                         data-aos="fade-up"
                         data-aos-anchor-placement="top-bottom">
-                        <a href="#">
+                        <a href="https://community-notice-board-alpha.vercel.app/" target="_blank" rel="noopener noreferrer">
                           <figure class="cc-effect">
-                            <img src="images/project-2.jpg" alt="Image" />
+                            <img src="images/project-2.jpg" alt="Community Notice Board preview" />
                             <figcaption>
-                              <div class="h4">Loan Default Prediction</div>
-                              <p>Python (Pandas, Scikit-Learn)</p>
+                              <div class="h4">Community Notice Board</div>
+                              <p>Community Web Application</p>
                             </figcaption>
                           </figure>
                           </a>
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <div
+                      <div data-project-category="web"
                         class="cc-porfolio-image img-raised"
                         data-aos="fade-up"
                         data-aos-anchor-placement="top-bottom"
                       >
                         <a
-                          href="#"
+                          href="https://expense-tracker-two-pied-19.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <figure class="cc-effect">
-                            <img src="images/project-3.jpg" alt="Image" />
+                            <img src="images/project-3.jpg" alt="Expense Pro preview" />
                             <figcaption>
-                              <div class="h4">Simon Game</div>
-                              <p>Interactive Game (JS, jQuery)</p>
+                              <div class="h4">Expense Pro</div>
+                              <p>Personal Finance Dashboard</p>
                             </figcaption>
                           </figure></a
                         >
                       </div>
-                      <div
+                      <div data-project-category="web"
                         class="cc-porfolio-image img-raised"
                         data-aos="fade-up"
                         data-aos-anchor-placement="top-bottom"
                       >
-                        <a href="#">
+                        <a href="https://github.com/Devansh-Mittal2410/Loan-Default-Prediction" target="_blank" rel="noopener noreferrer">
                           <figure class="cc-effect">
-                            <img src="images/project-4.jpg" alt="Image" />
+                            <img src="images/project-4.jpg" alt="Loan Default Prediction preview" />
                             <figcaption>
-                              <div class="h4">Amazon Clone</div>
-                              <p>Frontend (HTML, CSS)</p>
+                              <div class="h4">Loan Default Prediction</div>
+                              <p>Python / Pandas / Scikit-Learn</p>
                             </figcaption>
                           </figure></a
                         >
